@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GPI-O2-bCf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="mqk-Xu-3hE">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="GPI-O2-bCf" customClass="PageViewController" customModule="TheQuizzler___iOS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79X-kI-fBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1404" y="-644"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="Mnc-Nx-Cmi">
+            <objects>
+                <viewController storyboardIdentifier="sbBlue" id="5tg-ox-46Z" customClass="LaunchViewController" customModule="TheQuizzler___iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YIh-N1-2zs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Eloops-logo" translatesAutoresizingMaskIntoConstraints="NO" id="3ix-yc-KRb">
+                                <rect key="frame" x="87" y="104" width="240" height="130"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DGv-Cz-BnT"/>
+                        <color key="backgroundColor" red="0.8707068563" green="0.97311562299999999" blue="0.92548638579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="3ix-yc-KRb" firstAttribute="top" secondItem="DGv-Cz-BnT" secondAttribute="top" constant="60" id="6yb-4h-Wlq"/>
+                            <constraint firstItem="3ix-yc-KRb" firstAttribute="leading" secondItem="DGv-Cz-BnT" secondAttribute="leading" constant="87" id="8Wy-P4-1Qj"/>
+                            <constraint firstItem="DGv-Cz-BnT" firstAttribute="trailing" secondItem="3ix-yc-KRb" secondAttribute="trailing" constant="87" id="8YI-Bm-4s4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWq-v3-FPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2638" y="86"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="6QQ-Sh-OOX">
+            <objects>
+                <viewController storyboardIdentifier="sbQuestions" id="9g7-HD-OQV" customClass="QuizViewController" customModule="TheQuizzler___iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="88M-Sl-nuw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DL0-bU-UVL">
+                                <rect key="frame" x="20" y="44" width="374" height="798"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0/15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoL-f6-gZh">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="54.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebw-i5-Nnv">
+                                        <rect key="frame" x="0.0" y="64.5" width="374" height="463.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZD-Fd-SsT">
+                                        <rect key="frame" x="0.0" y="538" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Tci-ha-L1v"/>
+                                        </constraints>
+                                        <state key="normal" title="Option1" backgroundImage="Rectangle">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="9g7-HD-OQV" eventType="touchUpInside" id="pOa-g4-zne"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAB-nF-x3U">
+                                        <rect key="frame" x="0.0" y="628" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="EBh-jw-gOV"/>
+                                        </constraints>
+                                        <state key="normal" title="Option2" backgroundImage="Rectangle">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="9g7-HD-OQV" eventType="touchUpInside" id="d0B-wE-fqR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axU-In-mqk">
+                                        <rect key="frame" x="0.0" y="718" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="kyd-ui-bu2"/>
+                                        </constraints>
+                                        <state key="normal" title="Option3" backgroundImage="Rectangle">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="9g7-HD-OQV" eventType="touchUpInside" id="kL5-xf-Ru7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z2u-al-slO"/>
+                        <color key="backgroundColor" red="0.8707068563" green="0.97311562299999999" blue="0.92548638579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="DL0-bU-UVL" secondAttribute="trailing" id="Pan-qt-0QS"/>
+                            <constraint firstItem="DL0-bU-UVL" firstAttribute="top" secondItem="z2u-al-slO" secondAttribute="top" id="YGw-3t-8zI"/>
+                            <constraint firstItem="z2u-al-slO" firstAttribute="bottom" secondItem="DL0-bU-UVL" secondAttribute="bottom" constant="20" id="YRm-U6-ldH"/>
+                            <constraint firstItem="DL0-bU-UVL" firstAttribute="leading" secondItem="88M-Sl-nuw" secondAttribute="leadingMargin" id="nl3-ex-pgs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerOption1" destination="jZD-Fd-SsT" id="bi2-Ty-JiE"/>
+                        <outlet property="answerOption2" destination="iAB-nF-x3U" id="otV-q3-Yfy"/>
+                        <outlet property="answerOption3" destination="axU-In-mqk" id="2Hb-iy-CKK"/>
+                        <outlet property="questionLabel" destination="ebw-i5-Nnv" id="LAc-ss-WC5"/>
+                        <outlet property="scoreLabel" destination="YoL-f6-gZh" id="Wex-w3-hX8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hn7-gd-vkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1057.9710144927537" y="85.714285714285708"/>
+        </scene>
+        <!--Startup View Controller-->
+        <scene sceneID="f6U-Y2-eqR">
+            <objects>
+                <viewController storyboardIdentifier="sbWelcome" id="45f-ZX-FOO" customClass="StartupViewController" customModule="TheQuizzler___iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n2B-Zv-yMB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Eloops-logo" translatesAutoresizingMaskIntoConstraints="NO" id="SLH-eg-elg">
+                                <rect key="frame" x="87" y="108" width="240" height="130"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bfy-GF-Y3A"/>
+                        <color key="backgroundColor" red="0.8707068563" green="0.97311562299999999" blue="0.92548638579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="bfy-GF-Y3A" firstAttribute="trailing" secondItem="SLH-eg-elg" secondAttribute="trailing" constant="87" id="E5n-sp-5ir"/>
+                            <constraint firstItem="SLH-eg-elg" firstAttribute="leading" secondItem="bfy-GF-Y3A" secondAttribute="leading" constant="87" id="N7L-ba-uai"/>
+                            <constraint firstItem="SLH-eg-elg" firstAttribute="top" secondItem="bfy-GF-Y3A" secondAttribute="top" constant="64" id="mrY-EN-xjf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Po2-Hf-EJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1861" y="86"/>
+        </scene>
+        <!--Thanks View Controller-->
+        <scene sceneID="hKu-6x-2Mj">
+            <objects>
+                <viewController storyboardIdentifier="sbThanks" id="onf-fN-ZHR" customClass="ThanksViewController" customModule="TheQuizzler___iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yW6-fZ-Ldp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Eloops-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Rtd-pH-b5w">
+                                <rect key="frame" x="87" y="113" width="240" height="130"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SMX-Rm-hOK"/>
+                        <color key="backgroundColor" red="0.8707068563" green="0.97311562299999999" blue="0.92548638579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Rtd-pH-b5w" firstAttribute="leading" secondItem="SMX-Rm-hOK" secondAttribute="leading" constant="87" id="BIm-TL-8ux"/>
+                            <constraint firstItem="Rtd-pH-b5w" firstAttribute="top" secondItem="SMX-Rm-hOK" secondAttribute="top" constant="69" id="Dkd-6u-e2f"/>
+                            <constraint firstItem="SMX-Rm-hOK" firstAttribute="trailing" secondItem="Rtd-pH-b5w" secondAttribute="trailing" constant="87" id="vlM-gs-6OT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXK-OM-x47" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-170" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Eloops-logo" width="440" height="130"/>
+        <image name="Rectangle" width="322" height="68"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
